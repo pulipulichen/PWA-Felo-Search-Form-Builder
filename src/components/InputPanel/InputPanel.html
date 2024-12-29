@@ -1,0 +1,20 @@
+<div class="InputPanel ui form">
+  <div class="field">
+    <label for="inputSite">{{ $t('Site') }}</label>
+    <input type="text" id="inputSite" name="inputSite" v-model="db.localConfig.site" />
+  </div>
+
+  <div class="field">
+    <label for="inputInviteCode">{{ $t('Invite Code') }}</label>
+    <input type="text" id="inputInviteCode" name="inputInviteCode" v-model="db.localConfig.inviteCode" />
+  </div>
+
+  <div class="field">
+    <label for="inputOpenWindow">{{ $t('Open Search') }}</label>
+    <select v-model="db.localConfig.openWindow">
+      <option value="differentQuery">{{ $t('New Windows for Different Queries') }}</option>
+      <option value="blank">{{ $t('Always in New Windows') }}</option>
+      <option value="self">{{ $t('Current Window') }}</option>
+    </select>
+  </div>
+</div>

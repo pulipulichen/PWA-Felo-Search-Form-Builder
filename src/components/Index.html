@@ -1,0 +1,28 @@
+<div class="Index"
+  v-show="db.config.inited">
+
+  <div class="ui text container segment InputPanels">
+    <h1 class="ui horizontal divider header">
+      {{ $t('Felo Search Form Builder') }}
+    </h1>
+    
+    <InputPanel 
+      ref="InputPanel"
+      :db="db">
+    </InputPanel>
+  </div>
+  
+  <div class="ui text container segment InputPanels">
+    <PreviewPanel 
+      ref="PreviewPanel"
+      :db="db">
+    </PreviewPanel>
+  </div>
+
+  <div class="ui text container segment InputPanels">
+    <OutputPanel 
+      ref="OutputPanel"
+      :db="db">
+    </OutputPanel>
+  </div>
+</div>

@@ -1,2 +1,2 @@
 # PWA-Felo-Search-Form-Builder
-A widget to build form HTML codes for Felo Search.
+An widget to build form HTML codes for Felo Search.
