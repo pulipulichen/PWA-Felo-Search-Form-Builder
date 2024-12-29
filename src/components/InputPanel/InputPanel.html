@@ -10,7 +10,15 @@
   </div>
 
   <div class="field">
-    <label for="inputOpenWindow">{{ $t('Open Search') }}</label>
+    <label for="inputInputType">{{ $t('Input Type') }}</label>
+    <select v-model="db.localConfig.inputType">
+      <option value="text">{{ $t('Short Text') }}</option>
+      <option value="textarea">{{ $t('Long Text') }}</option>
+    </select>
+  </div>
+
+  <div class="field">
+    <label for="inputOpenWindow">{{ $t('Result Display Option') }}</label>
     <select v-model="db.localConfig.openWindow">
       <option value="differentQuery">{{ $t('New Windows for Different Queries') }}</option>
       <option value="blank">{{ $t('Always in New Windows') }}</option>

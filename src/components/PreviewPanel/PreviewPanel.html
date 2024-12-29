@@ -3,6 +3,12 @@
     v-if="db.localConfig.site.trim() !== '' " />
   <input type="hidden" name="inviteCode" v-model="db.localConfig.inviteCode"
     v-if="db.localConfig.inviteCode.trim() !== '' " />
-  <input type="text" name="query" v-model="db.localConfig.query" placeholder="Ask a question..." />
+  <input type="text" name="query" 
+    v-if="db.localConfig.inputType === 'text'"
+    v-model="db.localConfig.query" :placeholder="$t('Ask a question...')" />
+  <textarea name="query" 
+    v-if="db.localConfig.inputType === 'textarea'"
+    style="width:100%;display: block;"
+    v-model="db.localConfig.query" :placeholder="$t('Ask a question...')"></textarea>
   <button type="submit">Ask Felo AI</button>
 </form>

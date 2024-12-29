@@ -14,7 +14,20 @@ let app = {
     },
   },
   computed: {
-    
+    computedSite () {
+      let site = this.db.localConfig.site.trim()
+      if (site === '') {
+        return ''
+      }
+
+      if (site.indexOf('//') > -1) {
+        site = site.substring(site.indexOf('//') + 2).trim()
+      }
+      if (site.indexOf('/') > -1) {
+        site = site.substring(0, site.indexOf('/')).trim()
+      }
+      return site
+    },
   },
   mounted() {
     
@@ -25,7 +38,7 @@ let app = {
       if (query.length === 0) {
         return false
       }
-      let site = this.db.localConfig.site.trim()
+      let site = this.computedSite
       if (site !== '') {
         query = query + ' site:' + site
       }

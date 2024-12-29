@@ -14,6 +14,20 @@ let app = {
     },
   },
   computed: {
+    computedSite () {
+      let site = this.db.localConfig.site.trim()
+      if (site === '') {
+        return ''
+      }
+
+      if (site.indexOf('//') > -1) {
+        site = site.substring(site.indexOf('//') + 2).trim()
+      }
+      if (site.indexOf('/') > -1) {
+        site = site.substring(0, site.indexOf('/')).trim()
+      }
+      return site
+    },
     htmlCode () {
       setTimeout(() => {
         hljs.highlightAll()
@@ -21,7 +35,7 @@ let app = {
       return `<form onsubmit="return setupFeloSearchAction(event)" >
     ${this.htmlCodeInputSite}
     ${this.htmlCodeInputInviteCode}
-    <input type="text" name="query" value="" placeholder="Ask a question..." />
+    ${this.htmlCodeInputType}
     <button type="submit">Ask Felo AI</button>
 </form>
 <script>
@@ -40,8 +54,16 @@ function setupFeloSearchAction() {
 </script>
 `
     },
+    htmlCodeInputType () {
+      if (this.db.localConfig.inputType === 'text') {
+        return `<input type="text" name="query" value="" placeholder="Ask a question..." />`
+      }
+      else if (this.db.localConfig.inputType === 'textarea') {
+        return `<textarea name="query" value="" placeholder="Ask a question..." style="width: 100%;display:block;"></textarea>`
+      }
+    },
     htmlCodeInputSite () {
-      let site = this.db.localConfig.site.trim()
+      let site = this.computedSite
 
       if (site === '') {
         return ''
@@ -61,7 +83,7 @@ function setupFeloSearchAction() {
       }
     },
     htmlCodeQuerySite () {
-      let site = this.db.localConfig.site.trim()
+      let site = this.computedSite
 
       if (site === '') {
         return ``

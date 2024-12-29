@@ -5,10 +5,10 @@ authors:
     given-names: Yung-Ting
     orcid: https://orcid.org/0000-0003-3751-610X
     email: https://blog.pulipuli.info
-title: "PWA-Felo-Search-Form-Builder"
+title: "PWA-Sign-in-Sheet-Generator"
 license: "MIT"
-repository-code: "https://github.com/pulipulichen/PWA-Felo-Search-Form-Builder"
-abstract: "An widget to build form HTML codes for Felo Search."
+repository-code: "https://github.com/pulipulichen/PWA-Sign-in-Sheet-Generator"
+abstract: "This is a progressive web application that generates sign-in sheets. Users can customize the header, input list information, and specify the layout of the sign-in sheet."
 identifiers:
   - type: doi
     value: 10.5281/zenodo.11312600
