@@ -27,3 +27,4 @@ https://pulipulichen.github.io/PWA-Felo-Search-Form-Builder/
 
 # Citation
 
+Chen, Y.-T. (2024). *PWA-Sign-in-Sheet-Generator* (Version 20241230.015703) [Computer software]. Zenodo. [https://doi.org/10.5281/ZENODO.14570007](https://doi.org/10.5281/ZENODO.14570007)
