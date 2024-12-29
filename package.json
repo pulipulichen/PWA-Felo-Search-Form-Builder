@@ -1,7 +1,7 @@
 {
-  "name": "PWA-Sign-in-Sheet-Generator",
+  "name": "PWA-Felo-Search-Form-Builder",
   "version": "1.0.0",
-  "description": "This is a progressive web application that generates sign-in sheets. Users can customize the header, input list information, and specify the layout of the sign-in sheet.",
+  "description": "An application for creating Felo AI Search form widgets for specific websites.",
   "main": "index.js",
   "scripts": {
     "start": "bash ./docker-compose/d3.webpack-watch-build-production.sh",
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://pulipuli.chen@gmail.com@github.com/pulipulichen/PWA-Sign-in-Sheet-Generator.git"
+    "url": "git+https://pulipuli.chen@gmail.com@github.com/pulipulichen/PWA-Felo-Search-Form-Builder.git"
   },
   "keywords": [
     "Vue.js",
@@ -36,10 +36,10 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pulipulichen/PWA-Sign-in-Sheet-Generator/issues"
+    "url": "https://github.com/pulipulichen/PWA-Felo-Search-Form-Builder/issues"
   },
-  "homepage": "https://github.com/pulipulichen/PWA-Sign-in-Sheet-Generator#readme",
-  "doi": "10.5281/zenodo.11312600",
+  "homepage": "https://github.com/pulipulichen/PWA-Felo-Search-Form-Builder#readme",
+  "doi": "10.5281/zenodo.11312959",
   "devDependencies": {
     "@babel/core": "7.5.5",
     "@babel/plugin-proposal-object-rest-spread": "7.5.5",
