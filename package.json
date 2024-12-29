@@ -39,7 +39,7 @@
     "url": "https://github.com/pulipulichen/PWA-Felo-Search-Form-Builder/issues"
   },
   "homepage": "https://github.com/pulipulichen/PWA-Felo-Search-Form-Builder#readme",
-  "doi": "10.5281/zenodo.11312959",
+  "doi": "10.5281/zenodo.14570008",
   "devDependencies": {
     "@babel/core": "7.5.5",
     "@babel/plugin-proposal-object-rest-spread": "7.5.5",

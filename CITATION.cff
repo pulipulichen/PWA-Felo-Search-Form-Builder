@@ -11,4 +11,4 @@ repository-code: "https://github.com/pulipulichen/PWA-Felo-Search-Form-Builder"
 abstract: "An application for creating Felo AI Search form widgets for specific websites."
 identifiers:
   - type: doi
-    value: 10.5281/zenodo.11312959
+    value: 10.5281/zenodo.14570008
