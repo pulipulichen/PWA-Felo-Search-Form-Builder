@@ -1,0 +1,12 @@
+<div class="LinkPanel ui form">
+  <div class="field">
+    <label for="blogLink">{{ $t('Blog Link') }}</label>
+    <a :href="blogLink">{{ blogLink }}</a>
+  </div>
+  <div class="field">
+    <button type="button" class="ui fluid button"
+      @click="copyBlogLink">
+      {{ $t('COPY') }}
+    </button>
+  </div>
+</div>

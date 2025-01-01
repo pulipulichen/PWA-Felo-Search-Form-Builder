@@ -12,14 +12,21 @@
     </InputPanel>
   </div>
   
-  <div class="ui text container segment InputPanels">
+  <div class="ui text container segment LinkPanel">
+    <LinkPanel 
+      ref="LinkPanel"
+      :db="db">
+    </LinkPanel>
+  </div>
+
+  <div class="ui text container segment PreviewPanel">
     <PreviewPanel 
       ref="PreviewPanel"
       :db="db">
     </PreviewPanel>
   </div>
 
-  <div class="ui text container segment InputPanels">
+  <div class="ui text container segment OutputPanel">
     <OutputPanel 
       ref="OutputPanel"
       :db="db">

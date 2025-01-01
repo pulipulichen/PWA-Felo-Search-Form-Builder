@@ -25,34 +25,21 @@ let app = {
     }
   },
   mounted() {
+    setTimeout(() => {
+      this.init()
+    }, 500)
   },
   methods: {
-    computedColumnButtonClassList (col) {
-      let classList = ['ui']
-
-      let colTag = `[${col}]`
-      // console.log({colTag, warning: this.db.localConfig.cellTemplate.indexOf(colTag)})
-      if (this.db.localConfig.cellTemplate.indexOf(colTag) === -1) {
-        classList.push('negative')
+    init () {
+      let site = this.getQueryParam('site')
+      if (site) {
+        this.db.localConfig.site = site
       }
-
-      classList.push('button')
-
-      return classList
     },
-    copyColumn (col) {
-      let colTag = `[${col}]`
-      this.db.utils.ClipboardUtils.copyPlainString(colTag)
-
-      if (this.db.localConfig.cellTemplate.indexOf(colTag) > -1) {
-        return false
-      } 
-
-      if (this.db.localConfig.cellTemplate.trim() !== '') {
-        this.db.localConfig.cellTemplate = this.db.localConfig.cellTemplate.trim() + '\n'
-      }
-      this.db.localConfig.cellTemplate = this.db.localConfig.cellTemplate + colTag
-    },
+    getQueryParam(name) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(name);
+    }
   }
 }
 

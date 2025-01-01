@@ -7,6 +7,7 @@ let Index = {
     InputPanel: () => import(/* webpackChunkName: "components/InputPanel" */ './InputPanel/InputPanel.vue'),
     PreviewPanel: () => import(/* webpackChunkName: "components/PreviewPanel" */ './PreviewPanel/PreviewPanel.vue'),
     OutputPanel: () => import(/* webpackChunkName: "components/OutputPanel" */ './OutputPanel/OutputPanel.vue'),
+    LinkPanel: () => import(/* webpackChunkName: "components/LinkPanel" */ './LinkPanel/LinkPanel.vue'),
   },
   data() {
     this.$i18n.locale = this.db.config.localConfig
