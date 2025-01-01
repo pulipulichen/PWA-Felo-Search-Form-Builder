@@ -15,7 +15,7 @@ let app = {
   },
   computed: {
     blogLink () {
-      return `https://blog.pulipuli.info/2025/01/how-to-search-specific-website-content-using-felo-ai.html?site=${this.db.localConfig.site}` 
+      return `https://blog.pulipuli.info/2025/01/how-to-search-specific-website-content-using-felo-ai.html#postcata_2025_01_how-to-search-specific-website-content-using-felo-ai.html0_anchor2?site=${this.db.localConfig.site}` 
     },
   },
   mounted() {
